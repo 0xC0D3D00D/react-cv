@@ -4,7 +4,6 @@ import Moment from 'moment';
 
 import Utils from '../../utils/utils';
 
-import cx from 'classnames';
 import s from './ExperienceItem.css';
 
 class ExperienceItem extends React.PureComponent {
@@ -15,7 +14,7 @@ class ExperienceItem extends React.PureComponent {
   render() {
       let a = Moment();
       return (
-        <div className={cx(s.changePhoneModal, this.props.className)}>
+        <div className="experience-item">
           {this.props.title}
           {this.props.organization}
           {this.props.description}

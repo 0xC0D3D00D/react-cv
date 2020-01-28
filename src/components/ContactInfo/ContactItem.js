@@ -1,17 +1,16 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
-import cx from 'classnames';
 
-
-import s from './ContactItem.css';
+import { styles } from './ContactItem.styles';
+import { css } from 'aphrodite';
 
 class ContactItem extends React.PureComponent {
 
   renderWithLink() {
       return (
-        <div className={cx(s.changePhoneModal, this.props.className)}>
-            <a href={this.props.url}>
+        <div className={css(styles.container)}>
+            <a className={css(styles.link)} href={this.props.url}>
             <FontAwesomeIcon icon={this.props.icon} /> {this.props.value}
             </a>
         </div>
@@ -20,7 +19,7 @@ class ContactItem extends React.PureComponent {
 
   renderWithoutLink() {
       return (
-        <div className={cx(s.changePhoneModal, this.props.className)}>
+        <div className={"contact-item"}>
             <FontAwesomeIcon icon={this.props.icon} /> {this.props.value}
         </div>
       );

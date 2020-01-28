@@ -2,21 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Moment from 'moment';
 
-import cx from 'classnames';
 import s from './ExperienceItem.css';
 
 class ExperienceItem extends React.PureComponent {
   render() {
       return (
-        <div className={cx(s.changePhoneModal, this.props.className)}>
+        <div className="experience">
           {this.props.jobTitle} <br/>
           {this.props.organization} <br/>
           {this.props.organizationDescription} <br/>
           {this.props.location} <br/>
           {this.props.startDate.format("MM/YYYY")} - {this.props.endDate == null ? "Present" : this.props.endDate.format("MM/YYYY")} <br/>
           <ul>
-          {this.props.achievements.map((achievement) => (
-              <li>{achievement}</li>
+          {this.props.achievements.map((achievement, index) => (
+              <li key={"experience-item-achievement-" + index}>{achievement}</li>
           ))}
           </ul>
         </div>

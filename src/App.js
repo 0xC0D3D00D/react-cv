@@ -1,14 +1,22 @@
 import React from 'react';
-
 import Moment from 'moment';
+import { css } from 'aphrodite';
 
-import './App.css';
-import Header from './components/header';
+import './Base.css';
+import { styles } from './App.styles';
+
+import Header from './components/Header';
 import ContactInfo from './components/ContactInfo/ContactInfo';
 import Skills from './components/Skills/Skills';
 import Experience from './components/Experience/Experience';
 
 function App() {
+  var header = {
+      firstName: "Mohammad Hossein",
+      lastName: "Heidari",
+      title: "Developer",
+      summary: "Experienced software engineer with a demonstrated history of working in the computer games industry.",
+  };
   var contactInfo = {
       linkedin: "mdhheydari",
       phone: "+989354366235",
@@ -28,7 +36,7 @@ function App() {
           organization: "ViaDirect",
           organizationDescription: "ViaDirect is an interactive solution that guides and informs visitors of public places.",
           location: "Paris, France",
-          startDate: Moment("2019/03/01"),
+          startDate: Moment("2019-03-01"),
           achievements: [
               "Responsible for integration of their products with Google Calendar.",
               "Standardized APIs using RFC3339 to support different time zones across the globe.",
@@ -37,8 +45,8 @@ function App() {
   ];
 
   return (
-    <div className="App">
-      <Header />
+    <div className={css(styles.appContainer)}>
+      <Header {...header} />
       <ContactInfo {...contactInfo} />
       <Skills skills={skills} />
       <Experience experience={experience} />

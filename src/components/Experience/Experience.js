@@ -3,16 +3,15 @@ import PropTypes from 'prop-types';
 
 import ExperienceItem from './ExperienceItem';
 
-import cx from 'classnames';
 import s from './Experience.css';
 
 class Experience extends React.PureComponent {
   render() {
       return (
-        <div className={cx(s.changePhoneModal, this.props.className)}>
+        <div className="experience">
           <h2>Experience</h2>
-          {this.props.experience.map((item) => (
-              <ExperienceItem {...item} />
+          {this.props.experience.map((item, index) => (
+              <ExperienceItem key={"experience-" + index} {...item} />
           ))}
         </div>
       );

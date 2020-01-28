@@ -10,8 +10,8 @@ import ContactItem from './ContactItem';
 import Utils from '../../utils/utils';
 import { LinkedinUrlMatcher } from '../../utils/Validator';
 
-import cx from 'classnames';
-import s from './ContactInfo.css';
+import { css } from 'aphrodite';
+import { styles } from './ContactInfo.styles.js';
 
 class ContactInfo extends React.PureComponent {
   constructor(props) {
@@ -262,11 +262,13 @@ class ContactInfo extends React.PureComponent {
  
   render() {
       return (
-        <div className={cx(s.changePhoneModal, this.props.className)}>
-          {this.state.errors}
-          {this.state.contactInfo.map((item, index) => (
-            <ContactItem icon={item.icon} key={item.title} value={item.value} url={item.URL} />
-          ))}
+        <div className={css(styles.container)}>
+          <div className={css(styles.innerContainer)}>
+            {this.state.errors}
+            {this.state.contactInfo.map((item, index) => (
+              <ContactItem icon={item.icon} key={item.title} value={item.value} url={item.URL} />
+            ))}
+          </div>
         </div>
       );
       /*
