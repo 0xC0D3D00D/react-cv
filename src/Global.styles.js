@@ -1,5 +1,6 @@
 
 export const colors = {
+    persianRed: '#cc3333',
     blackText: '#050002',
     grayText: '#666766',
     grayBackground: '#f1f1f1',
@@ -16,6 +17,11 @@ const fontRatios = {
     small: 0.85,
     xsmall: 0.65,
 };
+
+export const pageMargins = {
+    top: '1cm',
+    left: '1cm',
+}
 
 export const fontSizes = {
     xxlarge: Math.floor(baseFontSize*fontRatios.xxlarge) + 'px',

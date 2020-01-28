@@ -12,5 +12,9 @@ export const styles = StyleSheet.create({
   link: {
       color: colors.blackText,
       textDecoration: 'none',
-  }
+  },
+  icon: {
+      color: colors.persianRed,
+      fontSize: fontSizes.small,
+  },
 });

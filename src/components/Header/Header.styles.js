@@ -1,13 +1,13 @@
 import { StyleSheet } from 'aphrodite';
 
-import { colors, fontSizes, lineHeights } from '../../Global.styles';
+import { colors, fontSizes, lineHeights, pageMargins } from '../../Global.styles';
 
 export const styles = StyleSheet.create({
   headerContainer: {
       display: 'flex',
       flexDirection: 'column',
-      marginTop: '1cm',
-      marginLeft: '1cm',
+      marginTop: pageMargins.top,
+      marginLeft: pageMargins.left,
   },
   name: {
       color: colors.blackText,

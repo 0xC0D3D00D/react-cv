@@ -11,7 +11,7 @@ class ContactItem extends React.PureComponent {
       return (
         <div className={css(styles.container)}>
             <a className={css(styles.link)} href={this.props.url}>
-            <FontAwesomeIcon icon={this.props.icon} /> {this.props.value}
+            <FontAwesomeIcon className={css(styles.icon)} icon={this.props.icon} /> {this.props.value}
             </a>
         </div>
       );
@@ -19,8 +19,8 @@ class ContactItem extends React.PureComponent {
 
   renderWithoutLink() {
       return (
-        <div className={"contact-item"}>
-            <FontAwesomeIcon icon={this.props.icon} /> {this.props.value}
+        <div className={css(styles.container)}>
+            <FontAwesomeIcon className={css(styles.icon)} icon={this.props.icon} /> {this.props.value}
         </div>
       );
 
