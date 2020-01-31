@@ -1,9 +1,7 @@
 import React from 'react';
 import Moment from 'moment';
-import { css } from 'aphrodite';
 
-import './Base.css';
-import { styles } from './App.styles';
+import './index.css';
 
 import Header from './components/Header';
 import ContactInfo from './components/ContactInfo/ContactInfo';
@@ -45,7 +43,7 @@ function App() {
   ];
 
   return (
-    <div className={css(styles.appContainer)}>
+    <div className="container">
       <Header {...header} />
       <ContactInfo {...contactInfo} />
       <Skills skills={skills} />

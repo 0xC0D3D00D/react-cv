@@ -8,14 +8,20 @@ class ExperienceItem extends React.PureComponent {
   render() {
       return (
         <div className="experience">
-          {this.props.jobTitle} <br/>
-          {this.props.organization} <br/>
-          {this.props.organizationDescription} <br/>
-          {this.props.location} <br/>
-          {this.props.startDate.format("MM/YYYY")} - {this.props.endDate == null ? "Present" : this.props.endDate.format("MM/YYYY")} <br/>
+          <span className="title">
+            {this.props.jobTitle}
+            <span className="location"> ({this.props.location}) </span>
+          </span>
+          <span className="organization">
+            {this.props.organization}
+            <span className="date"> (
+              {this.props.startDate.format("MM/YYYY")} - {this.props.endDate == null ? "Present" : this.props.endDate.format("MM/YYYY")}
+            )</span>
+          </span>
+          <span className="organizationDescr">{this.props.organizationDescription}</span>
           <ul>
           {this.props.achievements.map((achievement, index) => (
-              <li key={"experience-item-achievement-" + index}>{achievement}</li>
+              <li className="itemDescr" key={"experience-item-achievement-" + index}>{achievement}</li>
           ))}
           </ul>
         </div>

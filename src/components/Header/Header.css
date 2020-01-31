@@ -1,0 +1,18 @@
+.header {
+    display: flex;
+    flex-direction: column;
+}
+.headerTitle {
+    padding: 4px 0;
+    font-size: 24px;
+    line-height: 2;
+    font-weight: bold;
+}
+.headerPosition {
+    font-size: 20px;
+    padding: 0 0 4px 0;
+}
+.headerInfo {
+    font-size: 18px;
+    padding: 4px;
+}

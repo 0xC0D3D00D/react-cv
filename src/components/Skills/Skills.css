@@ -1,0 +1,10 @@
+.skill {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+}
+.skills {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}

@@ -1,17 +1,15 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
-
-import { styles } from './ContactItem.styles';
-import { css } from 'aphrodite';
+import s from './ContactItem.css';
 
 class ContactItem extends React.PureComponent {
 
   renderWithLink() {
       return (
-        <div className={css(styles.container)}>
-            <a className={css(styles.link)} href={this.props.url}>
-            <FontAwesomeIcon className={css(styles.icon)} icon={this.props.icon} /> {this.props.value}
+        <div className="contact-item">
+            <a className="contact-link" href={this.props.url}>
+            <FontAwesomeIcon className="" icon={this.props.icon} /> {this.props.value}
             </a>
         </div>
       );
@@ -19,8 +17,8 @@ class ContactItem extends React.PureComponent {
 
   renderWithoutLink() {
       return (
-        <div className={css(styles.container)}>
-            <FontAwesomeIcon className={css(styles.icon)} icon={this.props.icon} /> {this.props.value}
+        <div className="">
+            <FontAwesomeIcon className="" icon={this.props.icon} /> {this.props.value}
         </div>
       );
 

@@ -7,10 +7,12 @@ class Skills extends React.PureComponent {
   render() {
       return (
         <div className={"skills"}>
-          <h2>Skills</h2>
-          {this.props.skills.map((item, index) => (
-            <span className="skill" key={"skill-" + index}>{item}</span>
-          ))}
+          <h1 className="section-header">Skills</h1>
+          <div className="skill">
+            {this.props.skills.map((item, index) => (
+              <span className="skill" key={"skill-" + index}>{item}</span>
+            ))}
+          </div>
         </div>
       );
   }

@@ -9,7 +9,7 @@ class Experience extends React.PureComponent {
   render() {
       return (
         <div className="experience">
-          <h2>Experience</h2>
+          <h1 className="section-header">Experience</h1>
           {this.props.experience.map((item, index) => (
               <ExperienceItem key={"experience-" + index} {...item} />
           ))}

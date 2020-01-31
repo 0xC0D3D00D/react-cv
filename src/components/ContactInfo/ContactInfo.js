@@ -4,14 +4,11 @@ import PropTypes from 'prop-types';
 import { PhoneNumberUtil, PhoneNumberFormat } from 'google-libphonenumber';
 
 import { faPhone, faMapMarker, faEnvelope, faHome } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedin, faGitlab, faStackOverflow, faTwitter, faSkype, faReddit } from '@fortawesome/free-brands-svg-icons';
-
+import { faGithub, faLinkedin, faGitlab } from '@fortawesome/free-brands-svg-icons';
 import ContactItem from './ContactItem';
+import s from './ContactInfo.css';
 import Utils from '../../utils/utils';
 import { LinkedinUrlMatcher } from '../../utils/Validator';
-
-import { css } from 'aphrodite';
-import { styles } from './ContactInfo.styles.js';
 
 class ContactInfo extends React.PureComponent {
   constructor(props) {
@@ -153,7 +150,7 @@ class ContactInfo extends React.PureComponent {
       return number;
   }
 
-  getFormattedPhone(format: PhoneNumberFormat) {
+  getFormattedPhone(format) {
       let phone = this.getPhone();
       if (!phone) {
           return this.props.phone;
@@ -262,8 +259,9 @@ class ContactInfo extends React.PureComponent {
  
   render() {
       return (
-        <div className={css(styles.container)}>
-          <div className={css(styles.innerContainer)}>
+        <div className="contact">
+            <h1 className="section-header">ContactInfo</h1>
+          <div className="contact-section">
             {this.state.errors}
             {this.state.contactInfo.map((item, index) => (
               <ContactItem icon={item.icon} key={item.title} value={item.value} url={item.URL} />

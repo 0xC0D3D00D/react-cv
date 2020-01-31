@@ -1,0 +1,31 @@
+.experience {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 0;
+}
+.location {
+  font-size: 15px;
+  font-weight: 500;
+}
+.organization {
+  padding: 4px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+.date {
+  font-size: 14px;
+}
+.organizationDescr {
+  font-size: 14px;
+    padding: 4px;
+    font-weight: 400;
+}
+
+.itemDescr{
+  padding: 4px 2px;
+  font-size: 14px;
+}
